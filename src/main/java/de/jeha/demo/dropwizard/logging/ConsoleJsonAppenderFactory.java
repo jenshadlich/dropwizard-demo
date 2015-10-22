@@ -22,9 +22,6 @@ import java.util.TimeZone;
 @JsonTypeName("console-json")
 public class ConsoleJsonAppenderFactory extends AbstractAppenderFactory {
 
-    @JsonProperty
-    private boolean appendLineSeparator = true;
-
     @SuppressWarnings("UnusedDeclaration")
     public enum ConsoleStream {
         STDOUT("System.out"),
@@ -47,6 +44,9 @@ public class ConsoleJsonAppenderFactory extends AbstractAppenderFactory {
     @NotNull
     private ConsoleStream target = ConsoleStream.STDOUT;
 
+    @NotNull
+    private Boolean appendLineSeparator = Boolean.TRUE;
+
     @JsonProperty
     public TimeZone getTimeZone() {
         return timeZone;
@@ -65,6 +65,16 @@ public class ConsoleJsonAppenderFactory extends AbstractAppenderFactory {
     @JsonProperty
     public void setTarget(ConsoleStream target) {
         this.target = target;
+    }
+
+    @JsonProperty
+    public boolean isAppendLineSeparator() {
+        return appendLineSeparator;
+    }
+
+    @JsonProperty
+    public void setAppendLineSeparator(boolean appendLineSeparator) {
+        this.appendLineSeparator = appendLineSeparator;
     }
 
     @Override
