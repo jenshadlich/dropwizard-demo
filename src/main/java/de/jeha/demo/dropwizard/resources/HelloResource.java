@@ -2,6 +2,7 @@ package de.jeha.demo.dropwizard.resources;
 
 
 import com.codahale.metrics.annotation.Timed;
+import de.jeha.demo.dropwizard.api.HelloResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +24,7 @@ public class HelloResource {
     public Response hello() {
         LOG.info("hello()");
 
-        return Response.ok().build();
+        return Response.ok(new HelloResponse("Hello World!")).build();
     }
 
 }
