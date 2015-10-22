@@ -21,6 +21,10 @@ import java.util.TimeZone;
 
 @JsonTypeName("console-json")
 public class ConsoleJsonAppenderFactory extends AbstractAppenderFactory {
+
+    @JsonProperty
+    private boolean appendLineSeparator = true;
+
     @SuppressWarnings("UnusedDeclaration")
     public enum ConsoleStream {
         STDOUT("System.out"),
@@ -73,7 +77,7 @@ public class ConsoleJsonAppenderFactory extends AbstractAppenderFactory {
         LayoutWrappingEncoder<ILoggingEvent> layoutEncoder = new LayoutWrappingEncoder<>();
 
         JsonLayoutBase<ILoggingEvent> jsonLayout = new JsonLayout();
-        jsonLayout.setAppendLineSeparator(true);
+        jsonLayout.setAppendLineSeparator(appendLineSeparator);
 
         layoutEncoder.setLayout(jsonLayout);
         appender.setEncoder(layoutEncoder);
