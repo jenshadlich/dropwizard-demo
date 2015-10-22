@@ -15,6 +15,9 @@
         <slf4j.version>1.7.12</slf4j.version>
         <junit.version>4.12</junit.version>
         <dropwizard.version>0.8.4</dropwizard.version>
+        <!--
+        <dropwizard.version>0.9.0-rc5</dropwizard.version>
+        -->
         <!-- plugin versions -->
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
         <maven-shade-plugin.version>2.3</maven-shade-plugin.version>
@@ -113,7 +116,7 @@
                                         implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>de.jeha.demo.dropwizard.DemoService</mainClass>
+                                    <mainClass>de.jeha.demo.dropwizard.DropwizardDemoService</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

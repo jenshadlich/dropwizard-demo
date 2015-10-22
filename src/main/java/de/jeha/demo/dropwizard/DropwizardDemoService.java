@@ -11,12 +11,12 @@ import org.glassfish.jersey.server.ServerProperties;
 /**
  * @author jenshadlich@googlemail.com
  */
-public class DemoService extends Application<DemoConfiguration> {
+public class DropwizardDemoService extends Application<DemoConfiguration> {
 
-    private static final String APPLICATION_NAME = "demo-service";
+    private static final String APPLICATION_NAME = "dropwizard-demo-service";
 
     public static void main(String... args) throws Exception {
-        new DemoService().run(args);
+        new DropwizardDemoService().run(args);
     }
 
     @Override
