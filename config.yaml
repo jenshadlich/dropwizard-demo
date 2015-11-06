@@ -20,5 +20,6 @@ logging:
   loggers:
     "de.jeha.demo": DEBUG
   appenders:
-    - type: console-json
-      appendLineSeparator: true
+#    - type: console-json
+#      appendLineSeparator: true
+    - type: console
