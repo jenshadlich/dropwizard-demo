@@ -32,7 +32,7 @@ public class DropwizardDemoService extends Application<DemoConfiguration> {
 
     @Override
     public void run(DemoConfiguration configuration, Environment environment) {
-        environment.jersey().register(new HelloResource());
+        environment.jersey().register(new HelloResource(configuration.getHelloMessage()));
         environment.jersey().register(new VersionResource());
 
         environment.healthChecks().register("dummy", new DummyHealthCheck());

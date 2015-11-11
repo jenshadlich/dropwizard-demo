@@ -1,5 +1,6 @@
 package de.jeha.demo.dropwizard.config;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
 
 /**
@@ -7,4 +8,11 @@ import io.dropwizard.Configuration;
  */
 public class DemoConfiguration extends Configuration {
 
+    @JsonProperty
+    private String helloMessage;
+
+    public String getHelloMessage() {
+        return helloMessage;
+    }
+    
 }

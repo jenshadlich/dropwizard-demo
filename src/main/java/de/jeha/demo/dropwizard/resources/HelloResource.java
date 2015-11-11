@@ -17,6 +17,12 @@ public class HelloResource {
 
     private static final Logger LOG = LoggerFactory.getLogger(HelloResource.class);
 
+    private final String message;
+
+    public HelloResource(String message) {
+        this.message = message;
+    }
+
     @GET
     @Path("/hello")
     @Produces(MediaType.APPLICATION_JSON)
@@ -24,7 +30,7 @@ public class HelloResource {
     public Response hello() {
         LOG.info("hello()");
 
-        return Response.ok(new HelloResponse("Hello World!")).build();
+        return Response.ok(new HelloResponse(message)).build();
     }
 
 }

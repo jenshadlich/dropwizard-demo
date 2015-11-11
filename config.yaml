@@ -1,3 +1,5 @@
+helloMessage: Hello World!
+
 server:
   type: default
   maxThreads: 32
@@ -23,3 +25,7 @@ logging:
 #    - type: console-json
 #      appendLineSeparator: true
     - type: console
+#    - type: syslog
+#      host: localhost
+#      port: 514
+#      facility: local7
