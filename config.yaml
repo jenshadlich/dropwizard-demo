@@ -22,6 +22,13 @@ logging:
   loggers:
     "de.jeha.demo": DEBUG
   appenders:
+#    - type: logstash-tcp
+#      destination: logging2.virtual:4567
+#      tag: jns-test
+#    - type: logstash
+#      host: logging2.virtual
+#      port: 514
+#      tag: jns-test
 #    - type: console-json
 #      appendLineSeparator: true
     - type: console
