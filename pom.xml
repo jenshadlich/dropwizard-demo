@@ -17,7 +17,7 @@
         <dropwizard.version>0.9.1</dropwizard.version>
         <!-- plugin versions -->
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
-        <maven-shade-plugin.version>2.3</maven-shade-plugin.version>
+        <maven-shade-plugin.version>2.4.2</maven-shade-plugin.version>
         <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
         <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
     </properties>
