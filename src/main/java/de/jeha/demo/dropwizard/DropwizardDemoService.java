@@ -3,6 +3,7 @@ package de.jeha.demo.dropwizard;
 import de.jeha.demo.dropwizard.config.DemoConfiguration;
 import de.jeha.demo.dropwizard.health.DummyHealthCheck;
 import de.jeha.demo.dropwizard.resources.HelloResource;
+import de.jeha.demo.dropwizard.resources.ThrowExceptionResource;
 import de.jeha.demo.dropwizard.resources.VersionResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -34,6 +35,7 @@ public class DropwizardDemoService extends Application<DemoConfiguration> {
     public void run(DemoConfiguration configuration, Environment environment) {
         environment.jersey().register(new HelloResource(configuration.getHelloMessage()));
         environment.jersey().register(new VersionResource());
+        environment.jersey().register(new ThrowExceptionResource());
 
         environment.healthChecks().register("dummy", new DummyHealthCheck());
 
