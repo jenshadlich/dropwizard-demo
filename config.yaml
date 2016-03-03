@@ -16,15 +16,24 @@ server:
   gzip:
     enabled: true
     bufferSize: 32KiB
+  requestLog:
+    timeZone: UTC
+    appenders:
+      - type: console
+#      - type: logstash-access-log-tcp
+#        destination: logstash:4560
+#        applicationName: dropwizard-demo
+#        applicationVersion: 0.1-SNAPSHOT
 
 logging:
   level: INFO
   loggers:
     "de.jeha.demo": DEBUG
   appenders:
-#    - type: logstash-tcp
-#      destination: logging2.virtual:4567
-#      tag: jns-test
+    - type: logstash-event-log-tcp
+      destination: logstash:4560
+      applicationName: dropwizard-demo
+      applicationVersion: 0.1-SNAPSHOT
 #    - type: logstash
 #      host: logging2.virtual
 #      port: 514
