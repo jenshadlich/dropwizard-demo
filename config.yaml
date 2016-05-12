@@ -20,10 +20,6 @@ server:
     timeZone: UTC
     appenders:
       - type: console
-#      - type: logstash-access-log-tcp
-#        destination: logstash:4560
-#        applicationName: dropwizard-demo
-#        applicationVersion: 0.1-SNAPSHOT
 
 logging:
   level: INFO
@@ -34,14 +30,6 @@ logging:
       destination: logstash:4560
       applicationName: dropwizard-demo
       applicationVersion: 0.1-SNAPSHOT
-#    - type: logstash
-#      host: logging2.virtual
-#      port: 514
-#      tag: jns-test
 #    - type: console-json
 #      appendLineSeparator: true
     - type: console
-#    - type: syslog
-#      host: localhost
-#      port: 514
-#      facility: local7
