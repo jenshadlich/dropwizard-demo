@@ -10,6 +10,8 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.glassfish.jersey.server.ServerProperties;
 
+import java.util.Locale;
+
 /**
  * @author jenshadlich@googlemail.com
  */
@@ -18,6 +20,7 @@ public class DropwizardDemoService extends Application<DemoConfiguration> {
     private static final String APPLICATION_NAME = "dropwizard-demo-service";
 
     public static void main(String... args) throws Exception {
+        Locale.setDefault(Locale.ENGLISH);
         new DropwizardDemoService().run(args);
     }
 
