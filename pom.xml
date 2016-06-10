@@ -58,12 +58,6 @@
         <!-- runtime dependencies -->
         <dependency>
             <groupId>de.jeha.dropwizard.logging-extensions</groupId>
-            <artifactId>console-json</artifactId>
-            <version>0.1-SNAPSHOT</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>de.jeha.dropwizard.logging-extensions</groupId>
             <artifactId>logstash</artifactId>
             <version>0.1-SNAPSHOT</version>
             <scope>runtime</scope>
