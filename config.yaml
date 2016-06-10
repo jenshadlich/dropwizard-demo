@@ -17,7 +17,6 @@ server:
     enabled: true
     bufferSize: 32KiB
   requestLog:
-    timeZone: UTC
     appenders:
       - type: console
 
@@ -26,10 +25,10 @@ logging:
   loggers:
     "de.jeha.demo": DEBUG
   appenders:
-    - type: logstash-event-log-tcp
-      destination: logstash:4560
-      applicationName: dropwizard-demo
-      applicationVersion: 0.1-SNAPSHOT
+   - type: console
+#    - type: logstash-event-log-tcp
+#      destination: logstash:4560
+#      applicationName: dropwizard-demo
+#      applicationVersion: 0.1-SNAPSHOT
 #    - type: console-json
 #      appendLineSeparator: true
-    - type: console
